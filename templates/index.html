@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div style="margin-top: 50px;" class="ui container">
+        <h1 class="ui center aligned header">To-Do List</h1>
+
+        <form class="ui form" action="/add" method="post">
+            <div class="field">
+                <label style="font-weight: bold; font-size: 25px;">Todo Title</label>
+                <input type="text" name="title" placeholder="Enter Todo..."><br>
+            </div>
+            <button class="ui blue button" type="submit">Add</button>
+        </form>
+
+        <form class="ui form" action="/reset" method="post" style="margin-top: 20px;">
+            <button class="ui red button" type="submit" onclick="return confirm('Are you sure you want to reset all todos?')">Reset All Todos</button>
+        </form>
+
+        <hr> {% for todo in todo_list %}
+        <div class="ui segment">
+            <p class="ui big header">{{ todo.id }} | {{ todo.title }}</p>
+            {% if todo.complete == False %}
+            <span class="ui gray label">Not Complete</span> {% else %}
+            <span class="ui green label">Completed</span> {% endif %}
+            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
+            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer class="ui vertical footer segment">
+        <div class="ui container">
+            <div class="ui horizontal small divided link list">
+                <a class="item" href="{{ url_for('home') }}">Home</a>
+                <a class="item" href="#">Privacy Policy</a>
+                <a class="item" href="#">Terms of Use</a>
+                <a class="item" href="{{ url_for('contact') }}">Contact Us</a>
+            </div>
+            <div class="ui tiny inverted copyright message">
+                <p>Created by Ajeet Kumar</p>
+                <p>&copy; 2024 Ajeet Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

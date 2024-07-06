@@ -1,0 +1,52 @@
+.contact_page_img {
+    background-image: url('../images/a.jpg');
+}
+
+body {
+    background-image: url('../images/b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #ecf0f1;
+    h1.ui.header {
+        color: #f39c12;
+    }
+    /* Header styling */
+    h1.ui.center.aligned.header {
+        color: #2c3e50;
+        font-size: 55px;
+        margin-top: 20px;
+    }
+    .ui.segment {
+        margin: 20px 0;
+        background-color: #34495e;
+        color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .ui.blue.button {
+        background-color: #3498db !important;
+        color: #ecf0f1;
+    }
+    .ui.red.button {
+        background-color: #e74c3c !important;
+        color: #ecf0f1;
+    }
+    .contact-text {
+        color: #1f065e;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .black-text {
+        color: #000000;
+    }
+    .contact-text {
+        color: #1f065e;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .black-text {
+        color: #000000;
+    }
+}

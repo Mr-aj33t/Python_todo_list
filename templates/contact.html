@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="contact_page_img">
+    <div style="margin-top: 50px;" class="ui container">
+        <h1 class="ui center aligned header">Contact Us</h1>
+        <p class="contact-text">Feel free to contact us for any queries or feedback.</p>
+        <p>
+            <strong class="black-text">Name: Ajeet Kumar</p>
+        <p>
+            <strong class="black-text">Email: ak144817@gmail.com</p>
+        <p ><strong class="black-text"> Phone: +91 8933869888</p>
+        <p>
+            <strong class="black-text">Address:</strong> Armapur </p>
+        <p>
+            <strong class="black-text">City:</strong> Kanpur </p>
+        <p>
+            <strong class="black-text">Country:</strong> India </p>
+    </div>
+    <footer class="ui vertical footer segment">
+        <div class="ui container">
+            <div class="ui horizontal small divided link list">
+                <a class="item" href="{{ url_for('home') }}">Home</a>
+                <a class="item" href="#">Privacy Policy</a>
+                <a class="item" href="#">Terms of Use</a>
+                <a class="item" href="{{ url_for('contact') }}">Contact Us</a>
+            </div>
+            <div class="ui tiny inverted copyright message">
+                <p>Created by Ajeet Kumar</p>
+                <p>&copy; 2024 Ajeet Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
