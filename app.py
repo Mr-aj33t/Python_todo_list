@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for # type: ignore
-from flask_sqlalchemy import SQLAlchemy # type: ignore
-from sqlalchemy import text  # type: ignore # Import the text function
-
+from flask import Flask, render_template, request, redirect, url_for 
+from flask_sqlalchemy import SQLAlchemy 
+from sqlalchemy import text  
 app = Flask(__name__)
 
 # Corrected database URI
