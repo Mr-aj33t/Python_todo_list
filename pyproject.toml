@@ -2,12 +2,12 @@
 name = "python_todo_list"
 version = "0.1.0"
 description = "A simple Python to-do list application"
-authors = ["Your Name <your-email@example.com>"]
+authors = ["AJ <ak144817@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 flask = "^2.1.0"
-# Add other dependencies here
+# Add more dependencies as needed
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
